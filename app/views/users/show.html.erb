@@ -8,6 +8,10 @@
   <%=h @user.lastname %>
 </p>
 
-
+<% for @w in @user.wallets%>
+  <%=link_to @w.name, wallet_path(@w) %>
+  <br />
+<%end%>
+<br />
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

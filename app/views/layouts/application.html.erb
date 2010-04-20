@@ -8,6 +8,14 @@
   </head>
   <body>
     <div id="container">
+      <!-- MENU -->
+      <ul style="display:inline; margin: 0; padding: 0; list-style-type: none;">
+        <li style="display:inline;"><%=link_to 'Users', users_path %></li>
+        <li style="display:inline;"><%=link_to 'Wallets', users_path %></li>
+        <li style="display:inline;"><%=link_to 'Investments', users_path %></li>
+        <li style="display:inline;"><%=link_to 'About', about_path %></li>
+      </ul>
+      
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>

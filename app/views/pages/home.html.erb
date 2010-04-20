@@ -1,0 +1,10 @@
+<h1>Home</h1>
+
+<ul>
+<% for u in User.all%>
+  <li><%=u.firstname%></li>
+<%end%>
+</ul>
+<br />
+
+<%=link_to 'About', about_path %>
