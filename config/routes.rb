@@ -1,15 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
+  map.devise_for :users
+
   map.resources :auctions
 
   map.resources :investments
 
   map.resources :wallets
-
-  map.resources :wallers
-
+  
   map.resources :users
-
-  map.resources :wallets
 
   map.about "about", :controller => "pages", :action => "about"
 

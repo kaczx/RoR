@@ -1,6 +1,8 @@
 class WalletsController < ApplicationController
   # GET /wallets
   # GET /wallets.xml
+  before_filter :authenticate_user!
+  
   def index
     @wallets = Wallet.all
 

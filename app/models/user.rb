@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
-  
-  has_many :wallets
-  # on considere que le firstname est le mail car la flemme de le rajouter :)
-  validates_format_of :firstname, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
-  
+  # Include default devise modules. Others available are:
+  # :http_authenticatable, :token_authenticatable, :lockable, :timeoutable and :activatable :confirmable,
+  devise :registerable, :authenticatable,  :recoverable,
+         :rememberable, :trackable, :validatable
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation
+    
 end

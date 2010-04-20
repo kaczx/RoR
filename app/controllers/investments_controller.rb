@@ -1,6 +1,8 @@
 class InvestmentsController < ApplicationController
   # GET /investments
   # GET /investments.xml
+  before_filter :authenticate_user!
+  
   def index
     @investments = Investment.all
 

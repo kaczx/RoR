@@ -11,9 +11,14 @@
       <!-- MENU -->
       <ul style="display:inline; margin: 0; padding: 0; list-style-type: none;">
         <li style="display:inline;"><%=link_to 'Users', users_path %></li>
-        <li style="display:inline;"><%=link_to 'Wallets', users_path %></li>
-        <li style="display:inline;"><%=link_to 'Investments', users_path %></li>
+        <li style="display:inline;"><%=link_to 'Wallets', wallets_path %></li>
+        <li style="display:inline;"><%=link_to 'Investments', investments_path %></li>
         <li style="display:inline;"><%=link_to 'About', about_path %></li>
+        <% if user_signed_in? %>
+          <li style="display:inline;"><%=link_to 'Deconnexion', destroy_user_session_path %></li>
+        <% else %>
+          <li style="display:inline;"><%=link_to 'Login', new_user_session_path %></li>
+        <% end %>        
       </ul>
       
       <%- flash.each do |name, msg| -%>
