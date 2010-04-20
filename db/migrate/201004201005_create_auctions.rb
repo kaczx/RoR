@@ -1,14 +1,14 @@
-class CreateAuction <ActiveRecord::Migration
+class CreateAuctions < ActiveRecord::Migration
   
   def self.up
-    create_table :auction do |t|
+    create_table :auctions do |t|
       t.string :name
       t.float :exchange_rate
     end
   end
   
   def self.down
-    drop_table :auction
+    drop_table :auctions
   end
   
 end
