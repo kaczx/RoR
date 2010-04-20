@@ -9,11 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100420091402) do
+ActiveRecord::Schema.define(:version => 20100420100657) do
 
   create_table "auctions", :force => true do |t|
-    t.string "name"
-    t.float  "exchange_rate"
+    t.string  "name"
+    t.float   "exchange_rate"
+    t.integer "wallet_id"
   end
 
   create_table "users", :force => true do |t|
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20100420091402) do
   create_table "wallets", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
 end
