@@ -1,4 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :auctions
+
+  map.resources :investments
+
+  map.resources :wallets
+
+  map.resources :wallers
+
+  map.resources :users
+
   map.resources :wallets
 
   # The priority is based upon order of creation: first created -> highest priority.
