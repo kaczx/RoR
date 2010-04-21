@@ -1,6 +1,8 @@
 class AuctionsController < ApplicationController
   # GET /auctions
   # GET /auctions.xml
+  before_filter :authenticate_user!
+
   def index
     @auctions = Auction.all
 

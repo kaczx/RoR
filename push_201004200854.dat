@@ -1,0 +1,1 @@
+{"klass":"Taps::Push","completed_tables":["investments"],"local_tables_info":{"users":1,"schema_migrations":5,"wallets":0,"investments":0,"auctions":0},"remote_url":"http://heroku:osui59a24am79x@taps3.heroku.com","session_uri":"/sessions/6014174952","database_url":"sqlite://db/development.sqlite3","table_filter":null,"stream_state":{}}
